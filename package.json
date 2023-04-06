@@ -11,6 +11,7 @@
     "@nrwl/js": "15.9.2",
     "@nrwl/linter": "15.9.2",
     "@nrwl/node": "^15.9.2",
+    "@nrwl/nx-workshop-node": "^0.0.1",
     "@nrwl/workspace": "15.9.2",
     "@types/jest": "^29.4.0",
     "@types/node": "~18.7.1",
