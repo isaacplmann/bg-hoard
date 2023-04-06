@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@bg-hoard/api/auth": ["libs/api/auth/src/index.ts"]
+      "@bg-hoard/api/auth": ["libs/api/auth/src/index.ts"],
+      "@bg-hoard/api/util-interface": ["libs/api/util-interface/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
