@@ -5,11 +5,13 @@ on: [pull_request] # This workflow will run only on Pull Requests
 jobs:
   test-affected: # give our job an ID
     runs-on: ubuntu-latest # the image our job will run on
-    name: Test CLI # the name that will appear on the Actions UI
+    name: Test Affected # the name that will appear on the Actions UI
     steps: # what steps it will perform
       - uses: actions/checkout@v3 # checkout whatever branch the PR is using
       - uses: bahmutov/npm-install@v1 # trigger an `npm install`
+      - uses: nrwl/nx-set-shas@v3
       - run: |
+          git branch --track main origin/main
           npx nx affected --target=test
           npx nx affected --target=lint
           npx nx affected --target=build
