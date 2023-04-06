@@ -8,8 +8,6 @@ jobs:
     name: Test CLI # the name that will appear on the Actions UI
     steps: # what steps it will perform
       - uses: actions/checkout@v3 # checkout whatever branch the PR is using
-        with:
-          fetch-depth: 0
       - uses: bahmutov/npm-install@v1 # trigger an `npm install`
       - run: |
         npx nx affected --target=test
