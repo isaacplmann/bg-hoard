@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v3 # checkout whatever branch the PR is using
       - uses: bahmutov/npm-install@v1 # trigger an `npm install`
       - run: |
-        npx nx affected --target=test
-        npx nx affected --target=lint
-        npx nx affected --target=build
-        npx nx affected --target=e2e
+          npx nx affected --target=test
+          npx nx affected --target=lint
+          npx nx affected --target=build
+          npx nx affected --target=e2e
