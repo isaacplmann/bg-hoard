@@ -1,4 +1,5 @@
 import fetch from 'node-fetch';
+import { Game } from '@bg-hoard/util-interface';
 
 const port = process.env.port || 3333;
 const baseUrl = `http://localhost:${port}/api`;
@@ -11,6 +12,6 @@ if (process.argv.length >= 3 && process.argv[2]) {
     fetchUrl = `${baseUrl}/games`
 }
 
-fetch(fetchUrl).then(response => response.json().then((val: any[]) => {
+fetch(fetchUrl).then(response => response.json().then((val: Game[]) => {
   console.log(val.map(game => `${game.name}: ${game.description}`).join('\\n'));
 }));
