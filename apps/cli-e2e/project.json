@@ -2,6 +2,7 @@
   "name": "cli-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "implicitDependencies": ["cli"],
+  "tags": ["scope:cli", "type:e2e"],
   "targets": {
     "e2e": {
       "executor": "@nrwl/jest:jest",

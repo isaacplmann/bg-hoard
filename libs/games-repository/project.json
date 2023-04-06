@@ -1,31 +1,31 @@
 {
-  "name": "util-interface",
+  "name": "games-repository",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/util-interface/src",
+  "sourceRoot": "libs/games-repository/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/util-interface",
-        "main": "libs/util-interface/src/index.ts",
-        "tsConfig": "libs/util-interface/tsconfig.lib.json",
-        "assets": ["libs/util-interface/*.md"]
+        "outputPath": "dist/libs/games-repository",
+        "main": "libs/games-repository/src/index.ts",
+        "tsConfig": "libs/games-repository/tsconfig.lib.json",
+        "assets": ["libs/games-repository/*.md"]
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/util-interface/**/*.ts"]
+        "lintFilePatterns": ["libs/games-repository/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/util-interface/jest.config.ts",
+        "jestConfig": "libs/games-repository/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -36,5 +36,5 @@
       }
     }
   },
-  "tags": ["scope:shared","type:util"]
+  "tags": []
 }

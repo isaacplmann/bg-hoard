@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@bg-hoard/api/auth": ["libs/api/auth/src/index.ts"],
+      "@bg-hoard/games-repository": ["libs/games-repository/src/index.ts"],
       "@bg-hoard/util-interface": ["libs/util-interface/src/index.ts"]
     }
   },

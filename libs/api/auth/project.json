@@ -4,6 +4,9 @@
   "sourceRoot": "libs/api/auth/src",
   "projectType": "library",
   "targets": {
+    "build": {
+      "command": "echo build"
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
@@ -26,5 +29,5 @@
       }
     }
   },
-  "tags": []
+  "tags": ["scope:api","type:data-access"]
 }
