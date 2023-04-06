@@ -12,6 +12,8 @@ if (process.argv.length >= 3 && process.argv[2]) {
     fetchUrl = `${baseUrl}/games`
 }
 
+console.log('This is a new message!')
+
 fetch(fetchUrl).then(response => response.json().then((val: Game[]) => {
   console.log(val.map(game => `${game.name}: ${game.description}`).join('\\n'));
 }));
