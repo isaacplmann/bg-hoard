@@ -7,9 +7,11 @@ jobs:
     runs-on: ubuntu-latest # the image our job will run on
     name: Test Affected # the name that will appear on the Actions UI
     steps: # what steps it will perform
-      - uses: actions/checkout@v3 # checkout whatever branch the PR is using
-      - uses: bahmutov/npm-install@v1 # trigger an `npm install`
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - uses: nrwl/nx-set-shas@v3
+      - run: npm ci
       - run: |
           git branch --track main origin/main
           npx nx affected --target=test
