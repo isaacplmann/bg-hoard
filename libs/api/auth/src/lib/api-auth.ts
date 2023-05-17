@@ -7,6 +7,8 @@ export interface AuthFailureResponse {
   success: false;
 }
 
+// change made
+
 export function doAuth(): AuthResponse {
   return { success: true, name: 'Cheddar' };
 }
